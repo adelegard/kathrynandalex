@@ -1,4 +1,0 @@
-kathrynandalex
-==============
-
-Our wedding website.
