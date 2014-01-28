@@ -1,0 +1,8 @@
+name: "kathrynandalex"
+description: "Our wedding website!"
+
+url: "http://localhost:4000"
+
+markdown: redcarpet
+permalink: pretty
+pygments: true
