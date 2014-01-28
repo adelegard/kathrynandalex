@@ -113,7 +113,7 @@ img {
 }
 h1 {
 	color: #333;
-	font-family: 'gentium_book_basicregular', Helvetica, sans-serif;
+	font-family: 'Gentium Book Basic', Helvetica, sans-serif;
 	font-size: 2em;
 	font-weight: normal;
 	line-height: 1em;
@@ -122,9 +122,10 @@ h1 {
 }
 h2 {
 	color: #333;
-	font-family: 'gentium_book_basicbold_italic', Helvetica, sans-serif;
+	font-family: 'Gentium Book Basic', Helvetica, sans-serif;
 	font-size: 30px;
-	font-weight: normal;
+	font-weight: bold;
+	font-style: italic;
 	padding: 0;
 	margin: 45px 0 30px;
 	text-align: center;
@@ -310,7 +311,7 @@ section {
 	filter:alpha(opacity=65);
 }
 #rsvp input[type="text"] {
-	font-family: 'gentium_book_basicregular', Helvetica, sans-serif;
+	font-family: 'Gentium Book Basic', Helvetica, sans-serif;
 	font-size: 1.25em;
 	color: #666;
 	margin: 100px 0 25px;
@@ -338,8 +339,9 @@ section {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	color: #fff;
-	font-family: 'gentium_book_basicitalic', Helvetica, sans-serif;
+	font-family: 'Gentium Book Basic', Helvetica, sans-serif;
 	font-size: .875em;
+	font-style: italic;
 	padding: 11px 18px;
 	-webkit-transition: background .7s ease;
   -moz-transition: background .7s ease;
@@ -360,7 +362,7 @@ section {
 	color: #999;
 	display: inline-block;
 	margin: 0 5px;
-	font-family: 'gentium_book_basicregular', Helvetica, sans-serif;
+	font-family: 'Gentium Book Basic', Helvetica, sans-serif;
 	font-size: .875em;
 }
 #rsvp p.error {
@@ -387,8 +389,10 @@ nav {
 	}
 	nav li {
 		float: left;
-		font-family: 'gentium_book_basicbold_italic', Helvetica, sans-serif;
-	  font-size: 15px;
+		font-family: 'Gentium Book Basic', Helvetica, sans-serif;
+	  	font-size: 15px;
+		font-style: italic;
+		font-weight: bold;
 		overflow: hidden;
 	}
 	nav li a {
@@ -410,8 +414,10 @@ nav {
 		background: #000;
 	}
 	a.nav_hash {
-		font-family: 'gentium_book_basicbold_italic', Helvetica, sans-serif;
-	  font-size: 15px;
+		font-family: 'Gentium Book Basic', Helvetica, sans-serif;
+	  	font-size: 15px;
+		font-weight: bold;
+		font-style: italic;
 		overflow: hidden;
 		float: right;
 		background: none;
@@ -467,7 +473,7 @@ header span {
 	color: #333;
 	display: inline-block;
 	letter-spacing: 1px;
-	font-family: 'gentium_book_basicregular', Helvetica, sans-serif;
+	font-family: 'Gentium Book Basic', Helvetica, sans-serif;
 	font-size: .75em;
 	text-transform: uppercase;
 }
@@ -502,7 +508,8 @@ header span {
 	width: 100%;
 }
 #story span {
-	font-family: 'gentium_book_basicbold', Helvetica, sans-serif;
+	font-family: 'Gentium Book Basic', Helvetica, sans-serif;
+	font-weight: bold;
 	font-size: 1em;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -605,8 +612,9 @@ header span {
 	overflow: hidden;
 }
 #party span {
-	font-family: 'gentium_book_basicbold', Helvetica, sans-serif;
+	font-family: 'Gentium Book Basic', Helvetica, sans-serif;
 	font-size: 1em;
+	font-weight: bold;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	display: block;
@@ -648,7 +656,8 @@ header span {
 }
 #party dl dd {
 	color: #333;
-  font-family: 'gentium_book_basicitalic', Helvetica, sans-serif;
+  font-family: 'Gentium Book Basic', Helvetica, sans-serif;
+	font-style: italic;
 	font-size: .875em;
 	margin: 0;
 	padding: 0;
@@ -681,8 +690,9 @@ header span {
 }
 #info .info span {
 	display: block;
-	font-family: 'gentium_book_basicbold', Helvetica, sans-serif;
+	font-family: 'Gentium Book Basic', Helvetica, sans-serif;
 	font-size: 1em;
+	font-weight: bold;
 	letter-spacing: 2px;
 	margin-top: 35px;
 	text-transform: uppercase;
@@ -842,46 +852,6 @@ div.sb-message a:link,div.sb-message a:visited{color:#fff;text-decoration:underl
 /*FONTS
 **********************************
 **********************************/
-@font-face {
-    font-family: 'gentium_book_basicbold';
-    src: url('fonts/genbkbasb-webfont.eot');
-    src: url('fonts/genbkbasb-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/genbkbasb-webfont.woff') format('woff'),
-         url('fonts/genbkbasb-webfont.ttf') format('truetype'),
-         url('fonts/genbkbasb-webfont.svg#gentium_book_basicbold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'gentium_book_basicbold_italic';
-    src: url('fonts/genbkbasbi-webfont.eot');
-    src: url('fonts/genbkbasbi-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/genbkbasbi-webfont.woff') format('woff'),
-         url('fonts/genbkbasbi-webfont.ttf') format('truetype'),
-         url('fonts/genbkbasbi-webfont.svg#gentium_book_basicbold_italic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'gentium_book_basicitalic';
-    src: url('fonts/genbkbasi-webfont.eot');
-    src: url('fonts/genbkbasi-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/genbkbasi-webfont.woff') format('woff'),
-         url('fonts/genbkbasi-webfont.ttf') format('truetype'),
-         url('fonts/genbkbasi-webfont.svg#gentium_book_basicitalic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'gentium_book_basicregular';
-    src: url('fonts/genbkbasr-webfont.eot');
-    src: url('fonts/genbkbasr-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/genbkbasr-webfont.woff') format('woff'),
-         url('fonts/genbkbasr-webfont.ttf') format('truetype'),
-         url('fonts/genbkbasr-webfont.svg#gentium_book_basicregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
 
 
 /*MEDIA QUERIES
