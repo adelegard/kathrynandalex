@@ -718,6 +718,25 @@ header span {
 	text-align:center;
 }
 
+/* google map styles */
+#info .gm-style .marker {
+	text-align: center;
+}
+#info .gm-style .marker .title {
+	font-family: 'Gentium Book Basic', Helvetica, sans-serif;
+	font-weight: bold;
+	font-style: italic;
+}
+#info .gm-style .marker .subtitle,
+#info .gm-style .marker .subtitle a {
+	font-size: 12px;
+	color:#666;
+	text-decoration: none;
+}
+#info .gm-style img {
+	max-width: inherit;
+}
+
 /*INSTAGRAM
 **********************************
 **********************************/

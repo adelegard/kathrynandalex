@@ -19,6 +19,9 @@
 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+		<script src="javascript/plugins.js" type="text/javascript"></script>
+		<script src="javascript/main.js" type="text/javascript"></script>
     </head>
     <body>
 	    <div class="loader" style="display: none;"></div>
@@ -65,5 +68,39 @@
 	    </div>
 
 		{{ content }}
+
+		<div id="sb-container">
+			<div id="sb-overlay"></div>
+
+			<div id="sb-wrapper">
+				<div id="sb-title">
+					<div id="sb-title-inner"></div>
+				</div>
+
+				<div id="sb-wrapper-inner">
+					<div id="sb-body">
+						<div id="sb-body-inner"></div>
+
+						<div id="sb-loading">
+							<div id="sb-loading-inner">
+								<span>loading</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="sb-info">
+					<div id="sb-info-inner">
+						<div id="sb-counter"></div>
+
+						<div id="sb-nav">
+							<a id="sb-nav-close" onclick="Shadowbox.close()" title="Close"></a><a id="sb-nav-next" onclick="Shadowbox.next()" title=
+							"Next"></a><a id="sb-nav-play" onclick="Shadowbox.play()" title="Play"></a><a id="sb-nav-pause" onclick="Shadowbox.pause()" title=
+							"Pause"></a><a id="sb-nav-previous" onclick="Shadowbox.previous()" title="Previous"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
     </body>
 </html>

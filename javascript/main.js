@@ -1,15 +1,47 @@
 jQuery(function($) {
 	
+    // function initialize() {
+    //   var map_canvas = document.getElementById('map_canvas');
+    //   var map_options = {
+    //     center: new google.maps.LatLng(44.974893,-93.269909),
+    //     zoom: 1,
+    //     mapTypeId: google.maps.MapTypeId.ROADMAP
+    //   }
+    //   var map = new google.maps.Map(map_canvas, map_options)
+    // }
+    // google.maps.event.addDomListener(window, 'load', initialize);
     function initialize() {
-      var map_canvas = document.getElementById('map_canvas');
-      var map_options = {
-        center: new google.maps.LatLng(44.974893,-93.269909),
-        zoom: 1,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      }
-      var map = new google.maps.Map(map_canvas, map_options)
+	  var myLatlng = new google.maps.LatLng(44.974893,-93.269909);
+	  var mapOptions = {
+	    zoom: 17,
+	    center: myLatlng,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	  }
+	  var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+	  var marker = new google.maps.Marker({
+	      position: myLatlng,
+	      map: map,
+	      title: 'Minneapolis Club'
+	  });
+
+	  var infowindow = new google.maps.InfoWindow({
+	      content: '<div id="mpls-club-marker" class="marker">'+
+		      '<h3 class="title">Minneapolis Club</h3>'+
+		      '</div>'
+	  });
+	  google.maps.event.addListener(marker, 'click', function() {
+	    infowindow.open(map,marker);
+	  });
+      google.maps.event.trigger(marker, 'click');
     }
-    google.maps.event.addDomListener(window, 'load', initialize);
+    // google.maps.event.addDomListener(window, 'load', initialize);
+	$(document).mapz({
+		location0_title: "Minneapolis Club",
+		location0_latitude: 44.974893,
+		location0_longitude: -93.269909,
+		location0_address: "<div>729 2nd Ave S, Minneapolis, MN</div><div><a href='tel:6123322292'>(612) 332-2292</a> - <a href='http://mplsclub.org' target='_blank'>mplsclub.org</a></div>"
+	});
 	
 	/*smooth scroll*/
 	$('nav a[href^="#"]').click(function(e) {

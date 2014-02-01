@@ -11,6 +11,110 @@ if (!(window.console && console.log)) {
     }());
 }
 
+// GOOGLE MAPS PLUGIN
+(function($) {
+	$.fn.extend({
+		mapz: function(options) {
+
+			var defaults = [];
+			var options = $.extend(defaults, options);
+
+			var locations = [
+				{"title":options.location0_title, "lat":options.location0_latitude, "lng":options.location0_longitude, "text":options.location0_address},
+				{"title":options.location1_title, "lat":options.location1_latitude, "lng":options.location1_longitude, "text":options.location1_address},
+				{"title":options.location2_title, "lat":options.location2_latitude, "lng":options.location2_longitude, "text":options.location2_address},
+			];
+			var stylez = [{
+				featureType: "all",
+				elementType: "all",
+				stylers: [
+					{ saturation: -100 }
+				]
+			}];			
+			var settings = {
+				mapTypeControl: false,
+				mapTypeControlOptions: {
+					mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'grayscale']
+				},
+				navigationControl: false,
+				streetViewControl: false,
+				navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+				zoomControl: true,
+				scrollwheel: false
+			};
+
+			var map = new google.maps.Map(document.getElementById("map_canvas"), settings);
+			var markerBounds = new google.maps.LatLngBounds();
+			var mapType = new google.maps.StyledMapType(stylez, { name:"Grayscale" });    
+			map.mapTypes.set('grayscale', mapType);
+			map.setMapTypeId('grayscale');
+
+			google.maps.event.addListener(map, 'click', function() {
+				contentBubble.close();
+			});
+
+			for (var i = 0; i < locations.length; i++) {
+				if (typeof(locations[i].title) !== 'undefined') {
+
+					var data = locations[i];
+					var newMarker = new google.maps.LatLng(data.lat, data.lng);
+					var marker = new google.maps.Marker({
+						position: newMarker,
+						map: map,
+						icon: '/images/map_marker.png',
+						title: data.title,
+						text: data.text
+					});
+
+					(function(marker, data, newMarker, map) {
+						var contentString = '<div class="marker">' + 
+												'<h3 class="title">' + data.title + '</h3>' + 
+												'<div class="subtitle">' + data.text + '</div>' + 
+											'</div>';
+						google.maps.event.addListener(marker, 'click', function() {	
+							contentBubble.setContent(contentString);
+							contentBubble[$(contentBubble.c).is(":visible") ? "close" : "open"](map, marker);
+							map.panTo(newMarker);
+						});
+						})(marker, data, newMarker, map);
+
+						markerBounds.extend(newMarker);
+
+					}	
+				}
+
+				contentBubble = new InfoBubble({ 
+					map: map, 
+					shadowStyle: 0,
+					padding: 15,
+					minWidth: 250,
+					minHeight: 45,
+					backgroundColor: '#fff', 
+					borderRadius: 3, 
+					arrowSize: 15, 
+					borderWidth: 0, 
+					disableAutoPan: true, 
+					hideCloseButton: true, 
+					arrowPosition: 50, 
+					arrowStyle: 0 
+				}); 
+
+				google.maps.event.addListener(map, 'zoom_changed', function() {
+					zoomChangeBoundsListener = 
+					google.maps.event.addListener(map, 'bounds_changed', function(event) {
+						if (this.getZoom() > 15 && this.initialZoom == true) {
+							// Change max/min zoom here
+							this.setZoom(15);
+							this.initialZoom = false;
+						}
+						google.maps.event.removeListener(zoomChangeBoundsListener);
+					});
+				});
+				map.initialZoom = true;
+				map.fitBounds(markerBounds);
+			}
+		});
+})(jQuery);
 
 //INSTAGRAM PLUGIN
 (function($){
