@@ -10,14 +10,14 @@ title: Kathryn and Alex
 		{% include feature.html %}
 	</div>
 	<div id="content">
-		{% include our_story.html %}
+		<!-- {% include our_story.html %} -->
 		{% for gallery in site.data.galleries %}
 			{% if gallery.id == "couple" %}
 				{% assign gallery = gallery %}
 					{% include photos.html %}
 				{% endif %}
 			{% endfor %}
-		{% include party.html %}
+
 		{% include info.html %}
 		{% include instagram.html %}
 		{% include footer.html %}

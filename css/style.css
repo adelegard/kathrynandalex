@@ -694,7 +694,7 @@ a.top:hover {
 }
 #info .info a:link,
 #info .info a:visited {
-  color: #86878b;
+  color: #222;
   text-decoration: none;
   -webkit-transition: all .3s ease;
   -moz-transition: all .3s ease;
@@ -705,7 +705,7 @@ a.top:hover {
 #info .info a:link:hover,
 #info .info a:visited:hover {
   color: #333;
-  border-bottom: 1px solid transparent;
+  border-bottom: none;
 }
 #info .map_description {
   font-size: .75em;
