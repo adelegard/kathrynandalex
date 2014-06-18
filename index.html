@@ -8,14 +8,18 @@ title: Kathryn and Alex
 
 	<div id="feature">
 		{% include feature.html %}
-
-		<div id="content">
-			{% include our_story.html %}
-			{% include photos.html %}
-			{% include party.html %}
-			{% include info.html %}
-			{% include instagram.html %}
-			{% include footer.html %}
-		</div>
+	</div>
+	<div id="content">
+		{% include our_story.html %}
+		{% for gallery in site.data.galleries %}
+			{% if gallery.id == "couple" %}
+				{% assign gallery = gallery %}
+					{% include photos.html %}
+				{% endif %}
+			{% endfor %}
+		{% include party.html %}
+		{% include info.html %}
+		{% include instagram.html %}
+		{% include footer.html %}
 	</div>
 </div>

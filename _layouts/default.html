@@ -10,8 +10,9 @@
 		<link href='http://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 		<link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
 		<link href="css/normalize.css" rel="stylesheet" type="text/css">
-		<link href="css/style.less.css" media="screen" rel="stylesheet" type="text/css">
-		
+		<link href="css/style.css" media="screen" rel="stylesheet" type="text/css">
+		<link href="libs/shadowbox/shadowbox.css" media="screen" rel="stylesheet" type="text/css">
+
 	    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 	    <!--[if lt IE 9]>
 	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -21,51 +22,15 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 		<script src="javascript/plugins.js" type="text/javascript"></script>
+		<script src="libs/shadowbox/shadowbox.js" type="text/javascript"></script>
 		<script src="javascript/main.js" type="text/javascript"></script>
     </head>
-    <body>
-	    <div class="loader" style="display: none;"></div>
+    <body class="loading">
+    	<div class="loader-container">
+    		<div class="loader"></div>
+    	</div>
 
-	    <div class="peek" id="dropdown">
-	        <div id="rsvp">
-	            <div class="container">
-	                <form action="alex.delegard@gmail.com">
-	                    <input autocomplete="off" id="name" name="name" type="text" value="type the names of all attendees or regrets...">
-						<input id="accomodate" name="accomodate" type="checkbox" value="I need accomadations">
-						<a class="rsvp_trigger" href="">
-							<img src="images/close_rsvp_icon.png">
-						</a>
-
-	                    <div class="submits" style="display: block;">
-							<input class="accept" id="rsvp_accept" type="submit" value="confirm rsvp"> 
-							<span>or</span>
-							<input class="regret" id="rsvp_regret" type="submit" value="regretfully decline">
-	                    </div>
-
-	                    <p class="error">*There was an error submitting the form</p>
-	                </form>
-	            </div>
-	        </div>
-
-	        <nav>
-	            <div class="container">
-	                <ul>
-	                    <li><a class="story" href="#story">our story</a></li>
-	                    <li><a class="photos" href="#photos">photos</a></li>
-	                    <li><a class="party" href="#party">wedding party</a></li>
-	                    <li><a class="info" href="#info">information</a></li>
-	                    <li><a class="instagram" href="#instagram">instagram</a></li>
-	                    <li><a class="rsvp_trigger" href="">RSVP</a></li>
-	                    <li style="list-style: none">
-							<a class="top" href="#top" style="display: none;">
-								<img src="images/up_arrow.png">
-							</a>
-							<a class="nav_hash" href="#">#kathrynandalex</a>
-						</li>
-	                </ul>
-	            </div>
-	        </nav>
-	    </div>
+		{% include navbar.html %}
 
 		{{ content }}
 

@@ -1,0 +1,9 @@
+{% assign imageLargePath = imageLargePath %}
+{% assign imageThumbPath = imageThumbPath %}
+{% assign imageIndex = imageIndex %}
+<li>
+	<a href="{{imageLargePath}}" rel="shadowbox[{{include.group}}];player=img">
+		<div class="thumb photo-{{imageIndex}}"><img src="{{imageThumbPath}}"></div>
+		<div class="expand"><img src="images/expand_icon.png"></div>
+	</a>
+</li>

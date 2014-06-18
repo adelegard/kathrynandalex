@@ -1,127 +1,14 @@
 <section id="photos">
 	<div class="container">
 		<h2>photos</h2>
-
-		<ul>
-			<li>
-				<a href="" rel="shadowbox[Vacation]"></a>
-
-				<div class="thumb photo-0"><img src=""></div>
-
-				<div class="expand"><img src="images/expand_icon.png"></div>
-			</li>
-
-			<li>
-				<a href="" rel="shadowbox[Vacation]"></a>
-
-				<div class="thumb photo-1"><img src=""></div>
-
-				<div class="expand"><img src="images/expand_icon.png"></div>
-			</li>
-
-			<li>
-				<a href="" rel="shadowbox[Vacation]"></a>
-
-				<div class="thumb photo-2"><img src=""></div>
-
-				<div class="expand"><img src="images/expand_icon.png"></div>
-			</li>
-
-			<li>
-				<a href="" rel="shadowbox[Vacation]"></a>
-
-				<div class="thumb photo-3"><img src=""></div>
-
-				<div class="expand"><img src="images/expand_icon.png"></div>
-			</li>
-
-			<li>
-				<a href="" rel="shadowbox[Vacation]"></a>
-
-				<div class="thumb photo-4"><img src=""></div>
-
-				<div class="expand"><img src="images/expand_icon.png"></div>
-			</li>
-
-			<li>
-				<a href="" rel="shadowbox[Vacation]"></a>
-
-				<div class="thumb photo-5"><img src=""></div>
-
-				<div class="expand"><img src="images/expand_icon.png"></div>
-			</li>
-
-			<li>
-				<a href="" rel="shadowbox[Vacation]"></a>
-
-				<div class="thumb photo-6"><img src=""></div>
-
-				<div class="expand"><img src="images/expand_icon.png"></div>
-			</li>
-
-			<li>
-				<a href="" rel="shadowbox[Vacation]"></a>
-
-				<div class="thumb photo-7"><img src=""></div>
-
-				<div class="expand"><img src="images/expand_icon.png"></div>
-			</li>
-
-			<li>
-				<a href="" rel="shadowbox[Vacation]"></a>
-
-				<div class="thumb photo-8"><img src=""></div>
-
-				<div class="expand"><img src="images/expand_icon.png"></div>
-			</li>
-
-			<li>
-				<a href="" rel="shadowbox[Vacation]"></a>
-
-				<div class="thumb photo-9"><img src=""></div>
-
-				<div class="expand"><img src="images/expand_icon.png"></div>
-			</li>
-
-			<li>
-				<a href="" rel="shadowbox[Vacation]"></a>
-
-				<div class="thumb photo-10"><img src=""></div>
-
-				<div class="expand"><img src="images/expand_icon.png"></div>
-			</li>
-
-			<li>
-				<a href="" rel="shadowbox[Vacation]"></a>
-
-				<div class="thumb photo-11"><img src=""></div>
-
-				<div class="expand"><img src="images/expand_icon.png"></div>
-			</li>
-
-			<li>
-				<a href="" rel="shadowbox[Vacation]"></a>
-
-				<div class="thumb photo-12"><img src=""></div>
-
-				<div class="expand"><img src="images/expand_icon.png"></div>
-			</li>
-
-			<li>
-				<a href="" rel="shadowbox[Vacation]"></a>
-
-				<div class="thumb photo-13"><img src=""></div>
-
-				<div class="expand"><img src="images/expand_icon.png"></div>
-			</li>
-
-			<li>
-				<a href="" rel="shadowbox[Vacation]"></a>
-
-				<div class="thumb photo-14"><img src=""></div>
-
-				<div class="expand"><img src="images/expand_icon.png"></div>
-			</li>
+		{% assign gallery = gallery %}
+		<ul class="clearfix">
+			{% for image in gallery.images %}
+				{% capture imageLargePath %}{{gallery.imagefolder}}{{image.name}}{% endcapture %}
+				{% capture imageThumbPath %}{{gallery.imagefolder}}{{image.thumb}}{% endcapture %}
+				{% assign imageIndex = forloop.index %}
+				{% include photo.html group="couple" %}
+			{% endfor %}
 		</ul>
 	</div>
 </section>

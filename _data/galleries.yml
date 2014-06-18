@@ -1,0 +1,41 @@
+- id: couple
+  description: This is the couple gallery
+  imagefolder: /images/couple
+  images:
+  - name: /seb_joes/1_1024.jpg
+    thumb: /seb_joes/1_150.jpg
+  - name: /seb_joes/2_1024.jpg
+    thumb: /seb_joes/2_150.jpg
+  - name: /seb_joes/3_1024.jpg
+    thumb: /seb_joes/3_150.jpg
+  - name: /seb_joes/4_1024.jpg
+    thumb: /seb_joes/4_150.jpg
+  - name: /seb_joes/5_1024.jpg
+    thumb: /seb_joes/5_150.jpg
+  - name: /seb_joes/6_1024.jpg
+    thumb: /seb_joes/6_150.jpg
+  - name: /seb_joes/7_1024.jpg
+    thumb: /seb_joes/7_150.jpg
+  - name: /rose_garden/1_1024.jpg
+    thumb: /rose_garden/1_150.jpg
+  - name: /rose_garden/2_1024.jpg
+    thumb: /rose_garden/2_150.jpg
+  - name: /rose_garden/4_1024.jpg
+    thumb: /rose_garden/4_150.jpg
+  - name: /rose_garden/6_1024.jpg
+    thumb: /rose_garden/6_150.jpg
+  - name: /rose_garden/7_1024.jpg
+    thumb: /rose_garden/7_150.jpg
+  - name: /rose_garden/8_1024.jpg
+    thumb: /rose_garden/8_150.jpg
+  - name: /rose_garden/9_1024.jpg
+    thumb: /rose_garden/9_150.jpg
+  - name: /rose_garden/10_1024.jpg
+    thumb: /rose_garden/10_150.jpg
+- id: anothergallery
+  description: This is another gallery
+  imagefolder: /images/couple
+  images:
+  - name: 650x650.gif
+    thumb: 650x650.gif
+    text: The first image
