@@ -619,8 +619,8 @@ a.top:hover {
 }
 #party .background {
   background-repeat: no-repeat;
-  height: 110px;
-  width: 100%;
+  height: auto;
+  width: 100px;
   -webkit-background-size: cover!important;
   -moz-background-size: cover!important;
   -ms-background-size: cover!important;

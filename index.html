@@ -14,10 +14,10 @@ title: Kathryn and Alex
 		{% for gallery in site.data.galleries %}
 			{% if gallery.id == "couple" %}
 				{% assign gallery = gallery %}
-					{% include photos.html %}
-				{% endif %}
-			{% endfor %}
-
+				{% include photos.html %}
+			{% endif %}
+		{% endfor %}
+		{% include party.html %}
 		{% include info.html %}
 		{% include instagram.html %}
 		{% include footer.html %}

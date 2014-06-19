@@ -5,8 +5,9 @@ KA.func = KA.func || {};
 	"use strict";
 
 	var COVER_IMAGES = [
-		"images/couple/k_a_banner_1600_cropped.jpg"
-		// "images/couple/k_a_banner_1600_cropped_bw_bg.png"
+		// "images/couple/k_a_banner_1600_cropped.jpg",
+		// "images/couple/k_a_banner_1600_cropped_bw_bg.png",
+		"images/couple/k_a_banner_seb_joes_1_cropped.png"
 	];
 
 	KA.func = {
