@@ -26,7 +26,7 @@ KA.func = KA.func || {};
 				, TARGET    = $NAV_ITEM.attr('href')
 				, DISTANCE  = $(TARGET).offset().top;
 
-			$('body,html').animate(
+			$('body,html').stop().animate(
 				{scrollTop:DISTANCE}, 1000, 'easeOutExpo'
 			);
 		},
